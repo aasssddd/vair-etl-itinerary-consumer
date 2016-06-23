@@ -19,7 +19,7 @@ class MySQL
 			console.log "connection created"
 
 	loadData: (fileFullPath, tableName, callback) ->
-		strSql = "LOAD DATA LOCAL INFILE '#{fileFullPath}' REPLACE INTO TABLE #{tableName} FIELDS TERMINATED BY '㊣' LINES TERMINATED BY '\r\n'"
+		strSql = "LOAD DATA LOCAL INFILE '#{fileFullPath}' REPLACE INTO TABLE #{tableName} FIELDS TERMINATED BY '㊣' LINES TERMINATED BY '\r\n' SET db_update_date=CURRENT_TIMESTAMP"
 		console.log strSql  
 
 		# @pool.query strSql, (err, data) ->

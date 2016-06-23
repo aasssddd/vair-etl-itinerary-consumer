@@ -46,7 +46,7 @@ class SpecialServiceAppender extends FileAppender
 			record.push item.update_name[0]
 			record.push item.help_text[0]
 			record.push item.special_service_status[0]
-			record.push updateDate
+			# record.push updateDate
 			appendCSV filePath, fileName, record, (err) ->
 				if err?
 					return callback err

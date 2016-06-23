@@ -5,7 +5,7 @@ moment = require 'moment'
 
 
 class FileAppender
-	dataDate: new moment().format "YYYY/MM/DD"
+	dataDate: new moment().format "YYYY/MM/DD HH:mm:ss"
 	constructor: (@filePath, @fileName) ->
 
 	appendCSV: (filePath, fileName, recordList, callback) ->

@@ -12,6 +12,12 @@ class ItineraryService
 	getItinerary: (pnr, callback) ->
 		args = {
 			headers: { 'Cache-Control':'no-cache' }
+			requestConfig: {
+				timeout: 300000
+			}
+			responseConfig: {
+				timeout: 300000
+			}
 		}
 		console.log "#{@urlbase}/#{pnr}"
 		resolvedUrl = url.resolve "#{@urlbase}", "#{pnr}"
@@ -23,7 +29,7 @@ class ItineraryService
 				data = JSON.parse(data_re)
 				return callback null, data
 			else 
-				return callback "#{messages.RESTFUL_RESP_ERROR.code}, #{messages.RESTFUL_RESP_ERROR.message}, #{resp.statusCode}, #{resp.statusMessage}", null
+				return callback "HTTP ERROR: #{resp.statusCode}, #{JSON.stringify resp.rawHeaders}", null
 		
 		req.on 'error', (err) ->
 			return callback err

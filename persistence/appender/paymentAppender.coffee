@@ -52,7 +52,7 @@ class PaymentAppender extends FileAppender
 			record.push item.create_name[0]
 			record.push item.update_name[0]
 			record.push item.payment_reference[0]
-			record.push updateDate
+			# record.push updateDate
 			appendCSV filePath, fileName, record, (err) ->
 				if err?
 					return callback err

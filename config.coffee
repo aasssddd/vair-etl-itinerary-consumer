@@ -31,3 +31,4 @@ module.exports =
 	environment: 
 		concurrentServiceCallLimit: 20
 		itineraryApiUrl: "http://vairservices-5633393.us-east-1.elb.amazonaws.com/booking/itinerary/"
+		# itineraryApiUrl: "http://localhost:8000/booking/itinerary/"

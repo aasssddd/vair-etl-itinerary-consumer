@@ -181,7 +181,7 @@ class TicketAppender extends FileAppender
 			record.push item.fee_baggage_weight_kgs[0]
 			record.push item.fee_baggage_weight_lbs[0]
 			record.push item.fee_baggage_count[0]
-			record.push updateDate
+			# record.push updateDate
 			appendCSV filePath, fileName, record, (err) ->
 				if err?
 					return callback err

@@ -36,10 +36,9 @@ class AgencyAppender extends FileAppender
 		record.push header.api_flag[0]
 		record.push header.agency_country_name[0]
 		record.push header.iata_number[0]
-		record.push updateDate
 		appendCSV filePath, fileName, record, (err) ->
-				if err?
-					return callback err
+			if err?
+				return callback err
 		callback null
 
 module.exports = AgencyAppender

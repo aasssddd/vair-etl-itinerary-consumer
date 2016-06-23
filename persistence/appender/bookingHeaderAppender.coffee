@@ -83,7 +83,7 @@ class BookingHeaderAppender extends FileAppender
 		record.push header.fee_total[0]
 		record.push header.ticket_payment_total[0]
 		record.push header.fee_payment_total[0]
-		record.push updateDate
+		# record.push updateDate
 		appendCSV filePath, fileName, record, (err) ->
 				if err?
 					return callback err

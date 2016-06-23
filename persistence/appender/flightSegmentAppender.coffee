@@ -70,7 +70,7 @@ class FlightSegmentAppender extends FileAppender
 			record.push moment(item.utc_departure_date_time[0], "YYYYMMDD HH:mm:ss").format "YYYY/MM/DD HH:mm:ss"
 			record.push moment(item.utc_arrival_date_time[0], "YYYYMMDD HH:mm:ss").format "YYYY/MM/DD HH:mm:ss"
 			record.push item.close_web_sales_flag[0]
-			record.push updateDate
+			# record.push updateDate
 			appendCSV filePath, fileName, record, (err) ->
 				if err?
 					return callback err

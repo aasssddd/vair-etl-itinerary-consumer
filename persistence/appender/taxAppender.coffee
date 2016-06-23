@@ -37,7 +37,7 @@ class TaxAppender extends FileAppender
 			record.push item.summarize_up[0]
 			record.push item.coverage_type[0]
 			record.push item.passenger_type_rcd[0]
-			record.push updateDate
+			# record.push updateDate
 			appendCSV filePath, fileName, record, (err) ->
 				if err?
 					return callback err

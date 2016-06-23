@@ -33,7 +33,7 @@ class RemarkAppender extends FileAppender
 				record.push item.display_name[0]
 				record.push item.create_name[0]
 				record.push item.update_name[0]
-				record.push updateDate
+				# record.push updateDate
 				appendCSV filePath, fileName, record, (err) ->
 				if err?
 					return callback err

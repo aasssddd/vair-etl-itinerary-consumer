@@ -74,7 +74,7 @@ class FeeAppender extends FileAppender
 			record.push item.user_void[0]
 			record.push item.user_account[0]
 			record.push item.user_waive[0]
-			record.push updateDate
+			# record.push updateDate
 			appendCSV "#{filePath}", "#{fileName}", record, (err) ->
 				if err?
 					return callback err
