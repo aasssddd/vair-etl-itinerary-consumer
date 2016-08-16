@@ -1,10 +1,10 @@
 # config.coffee
 module.exports = 
 	aws:
-		queueUrl: "https://sqs.us-east-1.amazonaws.com/662107851369/ItineraryJob"
-		accessKeyId: "AKIAIQM4MWTKCNE3ALYQ",
-		secretAccessKey: "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"
-		region: "us-east-1"
+		queueUrl: "https://sqs.url"
+		accessKeyId: "aws access key id",
+		secretAccessKey: "aws secret access key"
+		region: "sqs region"
 		API_VERSION: "2012-11-05"
 		
 	tempFile:
@@ -22,13 +22,13 @@ module.exports =
 			fee: "itinerary_fee.csv"
 	
 	mysql:
-		host: 'prod1.c536e6lpzfqo.us-west-2.rds.amazonaws.com',
-		user: 'vairetl',
-		password: 'V@irRDS3TL',
-		database: 'pss',
+		host: 'https://mysql.url',
+		user: 'my sql user',
+		password: 'my sql password',
+		database: 'database',
 		poolSize: 4
 
 	environment: 
 		concurrentServiceCallLimit: 20
-		itineraryApiUrl: "http://vairservices-5633393.us-east-1.elb.amazonaws.com/booking/itinerary/"
+		itineraryApiUrl: "https://itinerary.api.url"
 		# itineraryApiUrl: "http://localhost:8000/booking/itinerary/"
